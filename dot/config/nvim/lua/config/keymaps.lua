@@ -14,8 +14,6 @@ vim.keymap.set("n", "<C-k>", "<C-w>j", { desc = "Go to Lower Window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window" })
 
 -- ijkl (minúsculas) = flechas. En modo visual salen de la selección y solo mueven.
--- WARNING: i en modo visual pisa text objects (iw, ip, ib, etc.).
--- Cuando se necesiten text objects, mapearlos a otra tecla (ej. a, <leader>i, gi).
 vim.keymap.set("n", "i", "k", { desc = "Move up", remap = false })
 vim.keymap.set("x", "i", "<Esc>k", { desc = "Exit visual and move up" })
 vim.keymap.set("n", "j", "h", { desc = "Move left", remap = false })
@@ -69,27 +67,15 @@ vim.keymap.set("x", "ck", "ygvk", { desc = "Yank and move down" })
 -- <CR> = nueva línea abajo sin entrar en insert
 vim.keymap.set("n", "<CR>", "o<Esc>", { desc = "New line below" })
 
--- WARNING: sl, sa, sw, sW, se, sb introducen delay en `s` (substitute). Nvim espera
--- timeoutlen ms tras presionar `s` para distinguir entre s y las variantes. Si molesta,
--- aumentar timeoutlen o usar otra secuencia (ej. <leader>sl, <leader>sa).
 vim.keymap.set("n", "sl", "V", { desc = "Select line" })
 vim.keymap.set("n", "sw", "viw", { desc = "Select inner word" })
 vim.keymap.set("n", "sW", "viW", { desc = "Select inner WORD" })
 vim.keymap.set("n", "se", "ve", { desc = "Select to end of word" })
 vim.keymap.set("n", "sb", "vb", { desc = "Select to beginning of word" })
 
--- WARNING: q sobreescribe la grabación de macros. Para grabar macros, usa Q
--- (que se reemplaza abajo) o <leader>q.
 vim.keymap.set("n", "q", "b", { desc = "Move backward word" })
 
--- WARNING: Q sobreescribe el Modo Ex. Si usas modo Ex, remapealo a <leader>Q.
 vim.keymap.set("n", "Q", "B", { desc = "Move backward WORD" })
-
--- WARNING: I/J/K/L sobreescriben comandos nativos importantes:
---   I = ir a inicio de línea + insert  → usa gI como alternativa
---   J = join lines                     → usa gJ como alternativa
---   K = keyword lookup (man/tldr)      → usa <leader>K (ya existe en LazyVim)
---   L = ir al final de pantalla        → usa G, ge o <C-End> como alternativa
 
 vim.keymap.set("n", "I", "vk", { desc = "Visual select up", remap = false })
 vim.keymap.set("x", "I", "k", { desc = "Extend selection up", remap = false })
