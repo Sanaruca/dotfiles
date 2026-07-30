@@ -1,3 +1,4 @@
 - clean: []
-- link: {}
+- link:
+    ~/.config/nvim: dot/config/nvim
 - shell: []
