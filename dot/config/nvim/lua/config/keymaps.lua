@@ -67,11 +67,6 @@ vim.keymap.set("x", "ck", "ygvk", { desc = "Yank and move down" })
 -- <CR> = new line below without entering insert
 vim.keymap.set("n", "<CR>", "o<Esc>", { desc = "New line below" })
 
-vim.keymap.set("n", "sl", "V", { desc = "Select line" })
-vim.keymap.set("n", "sw", "viw", { desc = "Select inner word" })
-vim.keymap.set("n", "sW", "viW", { desc = "Select inner WORD" })
-vim.keymap.set("n", "se", "ve", { desc = "Select to end of word" })
-vim.keymap.set("n", "sb", "vb", { desc = "Select to beginning of word" })
 
 vim.keymap.set("n", "q", "b", { desc = "Move backward word" })
 
