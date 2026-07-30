@@ -67,6 +67,13 @@ vim.keymap.set("x", "ck", "ygvk", { desc = "Yank and move down" })
 -- <CR> = new line below without entering insert
 vim.keymap.set("n", "<CR>", "o<Esc>", { desc = "New line below" })
 
+-- swap f and /
+vim.keymap.set("n", "f", "/", { desc = "Search forward" })
+vim.keymap.set("n", "/", "f", { desc = "Find char forward" })
+-- swap F and ?
+vim.keymap.set("n", "F", "?", { desc = "Search backward" })
+vim.keymap.set("n", "?", "F", { desc = "Find char backward" })
+
 
 vim.keymap.set("n", "q", "b", { desc = "Move backward word" })
 
