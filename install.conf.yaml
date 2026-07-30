@@ -1,4 +1,7 @@
 - clean: []
 - link:
     ~/.config/nvim: dot/config/nvim
+    ~/.config/fish/conf.d: dot/config/fish/conf.d
+    ~/.config/hypr/custom: dot/config/hypr/custom
+    ~/.config/kitty: dot/config/kitty
 - shell: []
